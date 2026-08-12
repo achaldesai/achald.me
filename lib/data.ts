@@ -63,13 +63,6 @@ export const projects: Project[] = [
     stack: ["HTML", "SmartThings API"],
     link: "https://github.com/achaldesai/lightBulb",
   },
-  {
-    title: "nostradamus",
-    // TODO: repo README is empty — add a one to two sentence description of what this does
-    description: "TODO: one to two sentence description of the project.",
-    stack: ["TypeScript", "Express", "Node.js"],
-    link: "https://github.com/achaldesai/nostradamus",
-  },
 ];
 
 export type ExperienceEntry = {

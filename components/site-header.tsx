@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { buttonVariants } from "@/components/ui/button";
+import { ThemeToggle } from "@/components/theme-toggle";
 import { profile } from "@/lib/data";
 
 const NAV_LINKS = [
@@ -33,6 +34,7 @@ export function SiteHeader() {
           >
             Resume
           </a>
+          <ThemeToggle />
         </nav>
       </div>
     </header>
