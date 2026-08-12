@@ -1,4 +1,3 @@
-import { Todo } from "@/components/todo";
 import { profile } from "@/lib/data";
 
 export function Hero() {
@@ -13,9 +12,7 @@ export function Hero() {
       <h2 className="mt-2 text-xl text-muted-foreground">
         {profile.roleTarget}
       </h2>
-      <p className="mt-6 max-w-xl text-lg">
-        <Todo>{profile.positioning}</Todo>
-      </p>
+      <p className="mt-6 max-w-xl text-lg">{profile.positioning}</p>
     </section>
   );
 }

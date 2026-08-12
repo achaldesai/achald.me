@@ -1,10 +1,17 @@
-import { Todo } from "@/components/todo";
 import { profile } from "@/lib/data";
 
 const LINKS = [
-  { label: "Email", value: profile.email, href: `mailto:${profile.email}` },
-  { label: "LinkedIn", value: profile.linkedin, href: profile.linkedin },
-  { label: "GitHub", value: profile.github, href: profile.github },
+  { label: "Email", display: profile.email, href: `mailto:${profile.email}` },
+  {
+    label: "LinkedIn",
+    display: profile.linkedin.replace(/^https?:\/\//, "").replace(/\/$/, ""),
+    href: profile.linkedin,
+  },
+  {
+    label: "GitHub",
+    display: profile.github.replace(/^https?:\/\//, ""),
+    href: profile.github,
+  },
 ];
 
 export function Contact() {
@@ -19,7 +26,12 @@ export function Contact() {
             <span className="w-16 shrink-0 text-muted-foreground">
               {link.label}
             </span>
-            <Todo>{link.value}</Todo>
+            <a
+              href={link.href}
+              className="underline underline-offset-4 hover:text-muted-foreground"
+            >
+              {link.display}
+            </a>
           </li>
         ))}
       </ul>

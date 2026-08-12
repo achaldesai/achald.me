@@ -2,22 +2,29 @@ export const profile = {
   name: "Achal Desai",
   roleTarget: "Senior Backend Engineer",
   location: "Mumbai, India",
-  // TODO: ask Achal for exact wording of the one-line positioning statement
-  positioning: "TODO: one-line positioning statement",
-  // TODO: which address — likely something@achald.me
-  email: "TODO: contact email",
-  linkedin: "TODO: LinkedIn URL",
-  github: "TODO: GitHub URL",
-  // TODO: add resume PDF to /public/resume.pdf
-  resumeUrl: "/resume.pdf",
+  positioning:
+    "Senior backend engineer with 6+ years building and scaling Node.js microservices, event-driven systems, and cloud infrastructure on AWS.",
+  email: "achald123@gmail.com",
+  linkedin: "https://linkedin.com/in/achal-desai/",
+  github: "https://github.com/achaldesai",
+  resumeUrl: "/Achal_Desai_Senior_Backend_Engineer.pdf",
 };
 
 export const skillGroups: { label: string; items: string[] }[] = [
-  { label: "Languages & Runtime", items: ["Node.js", "TypeScript"] },
-  { label: "Messaging & Caching", items: ["Kafka", "Redis"] },
-  { label: "Data", items: ["MongoDB"] },
-  { label: "AWS", items: ["EKS", "Lambda", "API Gateway", "CloudWatch"] },
-  { label: "Architecture", items: ["Microservices at scale"] },
+  { label: "Languages & Runtime", items: ["JavaScript", "TypeScript", "Node.js"] },
+  {
+    label: "Backend",
+    items: ["Express.js", "REST API design", "Microservices", "Auth & validation", "Jest"],
+  },
+  {
+    label: "Event-Driven & Messaging",
+    items: ["Kafka", "SQS", "AWS Lambda", "Confluent", "Redis"],
+  },
+  { label: "Databases", items: ["MongoDB", "PostgreSQL", "MySQL", "Firebase"] },
+  {
+    label: "Cloud & DevOps",
+    items: ["AWS (EKS, API Gateway, S3, CloudWatch)", "Docker", "GitLab CI/CD", "IaC", "Datadog"],
+  },
   {
     label: "Also",
     items: [
@@ -72,11 +79,28 @@ export type ExperienceEntry = {
 
 export const experience: ExperienceEntry[] = [
   {
-    company: "LTI Mindtree (Anywhere Real Estate account)",
-    title: "Backend Engineer",
-    start: "TODO: start date",
+    company: "LTIMindtree · Mumbai",
+    title: "Senior Software Engineer",
+    start: "Jan 2024",
     end: "Present",
-    bullets: ["TODO: 2-4 bullets on scope and impact in this role"],
+    bullets: [
+      "Architected and managed Node.js microservices for a high-concurrency system supporting 2M+ agents, ensuring 99.9% uptime through optimized API contracts and horizontal scaling.",
+      "Engineered serverless workflows using AWS Lambda, SQS, and Kafka to handle asynchronous data exchanges, improving system decoupling and fault tolerance for real-time analytics.",
+      "Reduced end-to-end API latency by 20% by optimizing MongoDB aggregation pipelines, implementing Redis caching, and refining data access patterns for high-volume operational data.",
+      "Owned the full CI/CD lifecycle using GitLab and AWS (EKS/CloudWatch), implementing automated monitoring and alerting that reduced production incident resolution time (MTTR) by 15%.",
+      "Spearheaded cross-functional collaboration between Angular frontend and backend teams to define robust RESTful schemas, enforcing strict code quality and release discipline across the microservices ecosystem.",
+    ],
   },
-  // TODO: add prior roles — ~6 years of experience total
+  {
+    company: "BharatCall (Neeks & Hanks Solutions)",
+    title: "Backend Engineer (Founding)",
+    start: "Jul 2020",
+    end: "Dec 2023",
+    bullets: [
+      "Acted as the sole backend engineer to architect, build, and scale a D2C SaaS platform from inception to 50,000+ production users, using Node.js, Express, and MongoDB.",
+      "Engineered mission-critical REST APIs and integrated third-party systems, including an in-house SMPP SMS gateway, WhatsApp Business API, Firebase in-app messaging, and major payment processors.",
+      "Accelerated product launch by developing end-to-end features, pairing high-throughput backend workflows with Angular-based dashboards for real-time e-commerce and campaign performance tracking.",
+      "Independently managed all production deployments and system reliability, implementing logging, monitoring, and automated pipelines for high availability and rapid incident resolution.",
+    ],
+  },
 ];
