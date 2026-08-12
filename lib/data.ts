@@ -41,31 +41,34 @@ export type Project = {
   link: string | null;
 };
 
-// TODO: replace all four with real projects — title, description, stack, link
 export const projects: Project[] = [
   {
-    title: "TODO: Project title",
-    description: "TODO: one to two sentence description of the project.",
-    stack: ["TODO: stack"],
-    link: null,
+    title: "Algo Trade Service",
+    description:
+      "TypeScript backend for algorithmic trading with a REST API for managing stocks, trades, and portfolios, using Angel One SmartAPI for market data and order execution.",
+    stack: ["TypeScript", "Node.js", "REST API", "Docker"],
+    link: "https://github.com/achaldesai/algo-trade-app",
   },
   {
-    title: "TODO: Project title",
-    description: "TODO: one to two sentence description of the project.",
-    stack: ["TODO: stack"],
-    link: null,
+    title: "GoInterpreter",
+    description:
+      "A simple interpreter written in Go, covering parsing, variable declarations, arithmetic operations, conditionals, and loop constructs.",
+    stack: ["Go"],
+    link: "https://github.com/achaldesai/GoInterpreter",
   },
   {
-    title: "TODO: Project title",
-    description: "TODO: one to two sentence description of the project.",
-    stack: ["TODO: stack"],
-    link: null,
+    title: "lightBulb",
+    description:
+      "A web UI for controlling a Philips Wiz Connected smart bulb by bridging it through the Samsung SmartThings API.",
+    stack: ["HTML", "SmartThings API"],
+    link: "https://github.com/achaldesai/lightBulb",
   },
   {
-    title: "TODO: Project title",
+    title: "nostradamus",
+    // TODO: repo README is empty — add a one to two sentence description of what this does
     description: "TODO: one to two sentence description of the project.",
-    stack: ["TODO: stack"],
-    link: null,
+    stack: ["TypeScript", "Express", "Node.js"],
+    link: "https://github.com/achaldesai/nostradamus",
   },
 ];
 

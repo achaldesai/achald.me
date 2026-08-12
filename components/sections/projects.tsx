@@ -7,7 +7,7 @@ import {
   CardFooter,
 } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { Todo } from "@/components/todo";
+import { Todo, MaybeTodo } from "@/components/todo";
 import { projects } from "@/lib/data";
 
 export function Projects() {
@@ -21,16 +21,16 @@ export function Projects() {
           <Card key={i}>
             <CardHeader>
               <CardTitle>
-                <Todo>{project.title}</Todo>
+                <MaybeTodo value={project.title} />
               </CardTitle>
               <CardDescription>
-                <Todo>{project.description}</Todo>
+                <MaybeTodo value={project.description} />
               </CardDescription>
             </CardHeader>
             <CardContent className="flex flex-wrap gap-2">
               {project.stack.map((tech) => (
                 <Badge key={tech} variant="outline">
-                  <Todo>{tech}</Todo>
+                  <MaybeTodo value={tech} />
                 </Badge>
               ))}
             </CardContent>

@@ -5,3 +5,11 @@ export function Todo({ children }: { children: React.ReactNode }) {
     </span>
   );
 }
+
+export function isTodo(value: string) {
+  return value.trim().startsWith("TODO");
+}
+
+export function MaybeTodo({ value }: { value: string }) {
+  return isTodo(value) ? <Todo>{value}</Todo> : <>{value}</>;
+}
