@@ -27,7 +27,7 @@ export function Projects() {
                 <MaybeTodo value={project.description} />
               </CardDescription>
             </CardHeader>
-            <CardContent className="flex flex-wrap gap-2">
+            <CardContent className="flex flex-1 flex-wrap items-start gap-2">
               {project.stack.map((tech) => (
                 <Badge key={tech} variant="outline">
                   <MaybeTodo value={tech} />

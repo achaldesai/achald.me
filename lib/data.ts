@@ -10,26 +10,61 @@ export const profile = {
   resumeUrl: "/Achal_Desai_Senior_Backend_Engineer.pdf",
 };
 
-export const skillGroups: { label: string; items: string[] }[] = [
-  { label: "Languages & Runtime", items: ["JavaScript", "TypeScript", "Node.js"] },
+// `core: true` marks the skills to emphasize — the primary stack called
+// out in the resume positioning, not every keyword in each category.
+export const skillGroups: { label: string; items: { name: string; core?: boolean }[] }[] = [
+  {
+    label: "Languages & Runtime",
+    items: [
+      { name: "TypeScript", core: true },
+      { name: "Node.js", core: true },
+      { name: "JavaScript" },
+    ],
+  },
   {
     label: "Backend",
-    items: ["Express.js", "REST API design", "Microservices", "Auth & validation", "Jest"],
+    items: [
+      { name: "Microservices", core: true },
+      { name: "Express.js" },
+      { name: "REST API design" },
+      { name: "Auth & validation" },
+      { name: "Jest" },
+    ],
   },
   {
     label: "Event-Driven & Messaging",
-    items: ["Kafka", "SQS", "AWS Lambda", "Confluent", "Redis"],
+    items: [
+      { name: "Kafka", core: true },
+      { name: "Redis", core: true },
+      { name: "AWS Lambda", core: true },
+      { name: "SQS" },
+      { name: "Confluent" },
+    ],
   },
-  { label: "Databases", items: ["MongoDB", "PostgreSQL", "MySQL", "Firebase"] },
+  {
+    label: "Databases",
+    items: [
+      { name: "MongoDB", core: true },
+      { name: "PostgreSQL" },
+      { name: "MySQL" },
+      { name: "Firebase" },
+    ],
+  },
   {
     label: "Cloud & DevOps",
-    items: ["AWS (EKS, API Gateway, S3, CloudWatch)", "Docker", "GitLab CI/CD", "IaC", "Datadog"],
+    items: [
+      { name: "AWS (EKS, API Gateway, S3, CloudWatch)", core: true },
+      { name: "Docker" },
+      { name: "GitLab CI/CD" },
+      { name: "IaC" },
+      { name: "Datadog" },
+    ],
   },
   {
     label: "Also",
     items: [
-      "Mentoring",
-      "AI-assisted engineering (Claude Code, GitHub Copilot, DeepSeek)",
+      { name: "Mentoring" },
+      { name: "AI-assisted engineering (Claude Code, GitHub Copilot, DeepSeek)" },
     ],
   },
 ];

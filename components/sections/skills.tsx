@@ -11,12 +11,26 @@ export function Skills() {
         {skillGroups.map((group) => (
           <div key={group.label}>
             <h3 className="text-sm font-medium">{group.label}</h3>
-            <div className="mt-2 flex flex-wrap gap-2">
-              {group.items.map((item) => (
-                <Badge key={item} variant="secondary">
-                  {item}
-                </Badge>
-              ))}
+            <div className="mt-2 flex flex-wrap items-center gap-2">
+              {group.items.map((item) =>
+                item.core ? (
+                  <Badge
+                    key={item.name}
+                    variant="secondary"
+                    className="px-3 py-1 text-sm font-semibold"
+                  >
+                    {item.name}
+                  </Badge>
+                ) : (
+                  <Badge
+                    key={item.name}
+                    variant="outline"
+                    className="border-border/60 text-xs font-normal text-muted-foreground"
+                  >
+                    {item.name}
+                  </Badge>
+                )
+              )}
             </div>
           </div>
         ))}
